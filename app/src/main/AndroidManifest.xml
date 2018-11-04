@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.DownloadClientActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,9 +17,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CaptureActivity"
+            android:name=".activity.CaptureActivity"
             android:label="@string/title_activity_capture"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.MainActivity">
+
+        </activity>
+
+        <service android:name=".services.MessengerDemoService">
+            <intent-filter>
+                <action android:name="com.android.binder.messengerdemo"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

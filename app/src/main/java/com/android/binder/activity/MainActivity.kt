@@ -1,10 +1,11 @@
-package com.android.binder
+package com.android.binder.activity
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.android.binder.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun activityStart(){
-        var intent = Intent(this,CaptureActivity::class.java)
+        var intent = Intent(this, CaptureActivity::class.java)
         startActivityForResult(intent,200)
     }
 
